@@ -33,12 +33,12 @@
   },
   "work": [
     {
-      "name": "Computational Linguistics and Text Mining Lab (CLTL), VU Amsterdam",
+      "name": "Computational Linguistics and Text Mining Lab (CLTL) @ VU Amsterdam",
       "position": "Research Assistant",
       "url": "http://www.cltl.nl",
-      "startDate": "2023-09-020",
-      "endDate": "2025-01-01",
-      "summary": "Working on extending the state of the art in extractive summarization by exploring the topological properties of the embedding space of text.",
+      "startDate": "2023-09-20",
+      "endDate": "2024-09-04",
+      "summary": "Research in extractive summarization by exploring the topological properties of the embedding space of text.",
       "highlights": ["TDA", "NLP"]
     },
     {
@@ -51,18 +51,7 @@
       "highlights": ["Python", "FastAPI", "AWS"]
     },
     {
-      "name": "Universidad de Ingenieria y Tecnologia",
-      "position": "Teaching Assistant",
-      "url": "https://www.utec.edu.pe/",
-      "startDate": "2019-01-01",
-      "endDate": "2020-12-15",
-      "summary": "Teaching assistant for the course Operating Systems, in charge of helping students with their assignments and exams.",
-      "highlights": ["Operating Systems", "C/C++"]}
-  ],
-  "volunteer": [
-    {
-      "organization": "Computing Systems Research Group @ UTEC",
-      "location": "Lima, Peru",
+      "name": "Computing Systems Research Group @ UTEC",
       "position": "Research Assistant",
       "url": "https://utec.edu.pe",
       "startDate": "2019-03-15",
@@ -70,6 +59,17 @@
       "summary": "Focused on computer architecture and operating systems.Produced one paper related to photonics",
       "highlights": ["Computer Architecture", "Photonics"]
     },
+    {
+      "name": "Universidad de Ingenieria y Tecnologia",
+      "position": "Teaching Assistant",
+      "url": "https://www.utec.edu.pe/",
+      "startDate": "2019-01-01",
+      "endDate": "2020-12-15",
+      "summary": "Teaching assistant for the course Operating Systems, in charge of helping students with their assignments and exams.",
+      "highlights": ["Operating Systems", "C/C++"]
+      }
+  ],
+  "volunteer": [
     {
       "organization": "Competitive Programming Club (CPC) @ UTEC",
       "location": "Lima, Peru",
@@ -122,7 +122,7 @@
       "startDate": "2023-01-01",
       "endDate": "2025-01-01",
       "score": "8.5/10",
-      "courses": ["Deep Learning 1", "Natural Language Processing", "Advanced Natural Language Processing"]
+      "courses": ["Deep Learning 1", "Natural Language Processing" ]
     },
     {
       "institution": "Universidad de Ingenieria y Tecnologia, Lima, Peru",
@@ -137,6 +137,20 @@
     }
   ],
   "awards": [
+    {
+      "title": "Winner in the TDL Challenge at ICML 2024 - Great Contributor",
+      "date": "2024-07-24",
+      "awarder": "TAGDS & PyT-Team at GRaM Workshop in ICML 2024",
+      "url": "",
+      "summary": "Winner in the Topological Deep Learning Challenge at the International Conference on Machine Learning 2024. Awarded for being a great contributor to the challenge."
+    },
+    {
+      "title": "Grant to attend ICML 2024",
+      "date": "2024-07-22",
+      "awarder": "University of Amsterdam",
+      "url": "",
+      "summary": "500 EUR grant to attend the International Conference on Machine Learning 2024 to present a poster"
+    },
     {
       "title": "IEEE Extreme Programming Competition - Top 100 team",
       "date": "2019-11-01",
@@ -183,7 +197,8 @@
       "keywords": [
         "Deep Learning",
         "Natural Language Processing",
-        "Statistics"
+        "Geometric Deep Learning",
+        "Topological Deep Learning"
       ]
     }
 
@@ -196,7 +211,7 @@
     },
     {
       "language": "English",
-      "fluency": "C2",
+      "fluency": "C1",
       "icon": ""
     }
   ],
@@ -209,24 +224,19 @@
   ],
   "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
+      "name": "XXX",
       "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "reference": "Supervisor"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Implementation of different topological lifting techniques",
+      "summary": "Set of submissions for a competition on topological deep learning techniques",
+      "highlights": ["Deep Learning", "Topological Deep Learning"],
+      "startDate": "2024-06-12",
+      "endDate": "2024-07-01",
+      "url": "https://martin-carrasco.github.io/projects/1_tdl_challenge/"
     }
   ]
 }

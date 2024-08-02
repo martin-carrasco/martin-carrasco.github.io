@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Martin
 middle_name:
 last_name: Carrasco
-email: martin.carrasco@utec.edu.pe
+email: m.carrasco.castaneda@student.vu.nl
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Welcome to my page
 footer_text: >
@@ -110,7 +110,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  You can reach me at martin.carrasco@utec.edu.pe
+  You can reach me at m.carrasco.castaneda@student.vu.nl
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -301,7 +301,7 @@ scholar:
   last_name: [Carrasco]
   first_name: [Carrasco, Martin]
 
-  style: apa
+  style: apa 
   locale: en
 
   source: /_bibliography/
