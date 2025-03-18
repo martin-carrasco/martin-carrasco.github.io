@@ -12,9 +12,9 @@ redirect_from:
 Education
 ======
 
-* Ph.D in Topological and Geometrical Machine Learning, Fribourg University, 2025 (expected)
-* M.S. in Artificial Intelligence, University of Amsterdam, 2023 (ongoing)
-* M.S. in Artificial Intelligence, Vrije Universiteit Amsterdam, 2023 (ongoing)
+* Ph.D in Topological and Geometrical Machine Learning, Fribourg University, 2025-2029 (Starting in September!)
+* M.S. in Artificial Intelligence, University of Amsterdam, 2025 (ongoing)
+* M.S. in Artificial Intelligence, Vrije Universiteit Amsterdam, 2025 (ongoing)
 * B.S. in Computer Science, Universidad de Ingenieria y Tecnologia, 2022
 
 
