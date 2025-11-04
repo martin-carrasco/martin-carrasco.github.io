@@ -6,12 +6,10 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Martin
 middle_name:
 last_name: Carrasco
-email: m.carrasco.castaneda@student.vu.nl
+email: martin.carrascocastaneda@unifr.ch
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Welcome to my page
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Welcome :) 
+footer_text: ''
 keywords: martin carrasco, geometric deep learning, topological deep learning, topological data analysis # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -48,7 +46,7 @@ rss_icon: false
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 
 # Dimensions
@@ -71,7 +69,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 acm_id: # your dl.acm.org/profile/id
 blogger_url: # your blogger URL
-bluesky_url: # your bluesky URL
+bluesky_url: martinca.bsky.social # your bluesky URL
 dblp_url: # your DBLP profile url
 discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
@@ -110,7 +108,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  You can reach me at m.carrasco.castaneda@student.vu.nl
+  You can reach me at martin(dot)carrascocastaneda(at)unifr(dot)ch
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -299,7 +297,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Carrasco]
-  first_name: [Carrasco, Martin]
+  first_name: [Martin, M.]
 
   style: apa 
   locale: en
@@ -353,7 +351,7 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
+max_author_limit: 5 # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.

@@ -8,8 +8,6 @@ related_publications: true
 bibliography: project_1.bib
 ---
 
-
-
 # Techniques
 This post referes to a small explanation of a set of techniques to lift from one topological domain to another in the framework of *Topological Deep Learning*. These implementations were done as a part of the **TDL Challenge ICML 2024** as part of the GRaM Workshop. All techniques were accepted, received an award for High Contribution and will be merged to the main branch of the **TopoBenchmarkX** python library.
 
