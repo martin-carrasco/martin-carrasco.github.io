@@ -20,6 +20,7 @@ group :jekyll_plugins do
     gem 'mini_racer'
     gem 'unicode_utils'
     gem 'webrick'
+    gem 'faraday', '~> 2.7', '>= 2.7.11'
 end
 group :other_plugins do
     gem 'css_parser'
