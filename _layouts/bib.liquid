@@ -11,9 +11,7 @@
           {%- endif -%}
           <abbr
             class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
+            {% if venue_style %}{{ venue_style }}{% endif -%}
           >
             {% if site.data.venues[entry.abbr].url %}
               <a href="{{site.data.venues[entry.abbr].url}}">{{ entry.abbr }}</a>
@@ -25,6 +23,7 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
+
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
@@ -34,7 +33,7 @@
             include figure.liquid
             loading="eager"
             path=entry_path
-            sizes = "200px"
+            sizes="200px"
             class="preview z-depth-1 rounded"
             zoomable=true
             alt=entry.preview
@@ -46,25 +45,39 @@
 
   <!-- Entry bib key -->
   <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
+
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
-
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
       {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
-        {% assign author_is_self = false %}
+        {%- assign author_is_self = false -%}
+
+        {%- comment -%} Strip annotation marks to get the clean last name for matching {%- endcomment -%}
         {%- assign author_last_name = author.last | remove: '¶' | remove: '&' | remove: '*' | remove: '†' | remove: '^' -%}
+
+        {%- comment -%} Use author+an annotation (e.g. equal, corresponding) as superscript {%- endcomment -%}
+        {%- assign annotation_marks = '' -%}
+        {%- if author.annotation -%}
+          {%- if author.annotation contains 'equal' -%}{%- assign annotation_marks = annotation_marks | append: '✱' -%}{%- endif -%}
+          {%- if author.annotation contains 'corresponding' -%}{%- assign annotation_marks = annotation_marks | append: '✉' -%}{%- endif -%}
+        {%- endif -%}
+
+        {%- comment -%} Check if this author is the site owner {%- endcomment -%}
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
+
+        {%- comment -%} Look up co-author URL {%- endcomment -%}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
@@ -76,29 +89,24 @@
           {% endfor %}
         {%- endif -%}
 
+        {%- comment -%} Separator logic {%- endcomment -%}
         {%- if forloop.length > 1 -%}
           {% if forloop.first == false %},&nbsp;{% endif %}
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
-        {% endif %}
-        {%- if author_is_self -%}
-          <em>
-            {{- author.first }}
-            {{ author.last -}}
-          </em>
-        {%- else -%}
-          {%- if coauthor_url -%}
-            <a href="{{coauthor_url}}">
-              {{- author.first }}
-              {{ author.last -}}
-            </a>
-          {%- else -%}
-            {{- author.first }}
-            {{ author.last -}}
-          {% endif %}
         {%- endif -%}
-      {% endfor %}
-      {%- assign more_authors = author_array_size | minus: author_array_limit -%}
 
+        {%- comment -%} Render author name with optional red highlight, link, and superscript marks {%- endcomment -%}
+        {%- if author_is_self -%}
+          <em><span style="color: #e53e3e;">{{- author.first }} {{ author_last_name -}}</span>{% if annotation_marks != '' %}<sup>{{ annotation_marks }}</sup>{% endif %}</em>
+        {%- elsif coauthor_url -%}
+          <a href="{{coauthor_url}}">{{- author.first }} {{ author_last_name -}}</a>{% if annotation_marks != '' %}<sup>{{ annotation_marks }}</sup>{% endif %}
+        {%- else -%}
+          {{- author.first }} {{ author_last_name -}}{% if annotation_marks != '' %}<sup>{{ annotation_marks }}</sup>{% endif %}
+        {%- endif -%}
+
+      {%- endfor -%}
+
+      {%- assign more_authors = author_array_size | minus: author_array_limit -%}
       {%- assign more_authors_hide = more_authors | append: ' more author' -%}
       {% if more_authors > 0 %}
         {%- if more_authors > 1 -%}
@@ -107,24 +115,20 @@
         {% assign more_authors_show = '' %}
         {%- for author in entry.author_array offset: author_array_limit -%}
           {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
-          {% unless forloop.last %}
-            {% assign more_authors_show = more_authors_show | append: ', ' %}
-          {% endunless %}
+          {% unless forloop.last %}{% assign more_authors_show = more_authors_show | append: ', ' %}{% endunless %}
         {%- endfor -%}
         , and
         <span
           class="more-authors"
           title="click to view {{more_authors_hide}}"
           onclick="
-              var element = $(this);
-              element.attr('title', '');
-              var more_authors_text = element.text() == '{{more_authors_hide}}' ? '{{more_authors_show}}' : '{{more_authors_hide}}';
-              var cursorPosition = 0;
-              var textAdder = setInterval(function(){
-                element.text(more_authors_text.substring(0, cursorPosition + 1));
-                if (++cursorPosition == more_authors_text.length){
-                  clearInterval(textAdder);
-                }
+            var element = $(this);
+            element.attr('title', '');
+            var more_authors_text = element.text() == '{{more_authors_hide}}' ? '{{more_authors_show}}' : '{{more_authors_hide}}';
+            var cursorPosition = 0;
+            var textAdder = setInterval(function(){
+              element.text(more_authors_text.substring(0, cursorPosition + 1));
+              if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); }
             }, '{{site.more_authors_animation_delay}}');
           "
         >
@@ -139,9 +143,9 @@
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{entry.booktitle}}</em> {% endcapture %}
+      {% capture entrytype %}<em>In {{entry.booktitle}}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
-      {% capture entrytype %}<em>{{entry.school}}</em> {% endcapture %}
+      {% capture entrytype %}<em>{{entry.school}}</em>{% endcapture %}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
@@ -153,28 +157,22 @@
     {% endif %}
     {% if entry.location %}
       {% capture entrytype %}{{entrytype}}{{ ", " }}{{entry.location}}{% endcapture %}
-    {% endif -%}
+    {% endif %}
     {% if entry.additional_info %}
-      {% capture entrytype %}{{entrytype}}{{entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
+      {% capture entrytype %}{{entrytype}}{{entry.additional_info | markdownify | remove: '<p>' | remove: '</p>'}}{% endcapture %}
     {% endif %}
     {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
-    {% if hook_exists == 'true' %}
-      {% include hook/bib.liquid %}
-    {% endif %}
+    {% if hook_exists == 'true' %}{% include hook/bib.liquid %}{% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
-    <div class="periodical">
-      {{ periodical | strip }}
-    </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+    <div class="periodical">{{ periodical | strip }}</div>
+    <div class="periodical">{{ entry.note | strip }}</div>
 
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
-          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awareded{% endif -%}
+          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
         </a>
       {% endif %}
       {% if entry.abstract %}
@@ -236,8 +234,10 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
     </div>
+
+    <!-- Publication Badges -->
     {% if site.enable_publication_badges %}
-      {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
+      {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or entry.eprint or entry.pmid or entry.isbn %}
       {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
       {% assign entry_has_google_scholar_badge = entry.google_scholar_id %}
       {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge %}
@@ -249,28 +249,20 @@
               data-hide-less-than="15"
               data-badge-type="2"
               data-badge-popover="right"
-              {% if entry.eprint %}
-                data-arxiv-id="{{ entry.eprint }}"
-              {% elsif entry.doi %}
-                data-doi="{{ entry.doi }}"
-              {% elsif entry.altmetric %}
-                data-altmetric-id="{{ entry.altmetric }}"
-              {% elsif entry.pmid %}
-                data-pmid="{{ entry.pmid }}"
-              {% elsif entry.isbn %}
-                data-isbn="{{ entry.isbn }}"
+              {% if entry.eprint %}data-arxiv-id="{{ entry.eprint }}"
+              {% elsif entry.doi %}data-doi="{{ entry.doi }}"
+              {% elsif entry.altmetric %}data-altmetric-id="{{ entry.altmetric }}"
+              {% elsif entry.pmid %}data-pmid="{{ entry.pmid }}"
+              {% elsif entry.isbn %}data-isbn="{{ entry.isbn }}"
               {% endif %}
             ></span>
           {% endif %}
           {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
             <span
               class="__dimensions_badge_embed__"
-              {% if entry.doi %}
-                data-doi="{{ entry.doi }}"
-              {% else %}
-                data-pmid="{{ entry.pmid }}"
-              {% else %}
-                data-id="{{ entry.dimensions }}"
+              {% if entry.doi %}data-doi="{{ entry.doi }}"
+              {% elsif entry.pmid %}data-pmid="{{ entry.pmid }}"
+              {% else %}data-id="{{ entry.dimensions }}"
               {% endif %}
               data-hide-zero-citations="true"
               data-style="small_rectangle"
@@ -294,22 +286,22 @@
       {% endif %}
     {% endif %}
 
+    <!-- Hidden Award block -->
     {% if entry.award %}
-      <!-- Hidden Award block -->
       <div class="award hidden d-print-inline">
         <p>{{ entry.award | markdownify }}</p>
       </div>
     {% endif %}
 
+    <!-- Hidden Abstract block -->
     {% if entry.abstract %}
-      <!-- Hidden abstract block -->
       <div class="abstract hidden">
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}
 
+    <!-- Hidden BibTeX block -->
     {% if entry.bibtex_show %}
-      <!-- Hidden bibtex block -->
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
@@ -317,11 +309,14 @@
       </div>
     {% endif %}
 
+    <!-- Hidden Video block -->
     {% if entry.video and site.enable_video_embedding %}
-      <!-- Hidden video block -->
       <div class="abstract hidden">
-        <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
+        <div style="text-align: center;">
+          {% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}
+        </div>
       </div>
     {% endif %}
+
   </div>
 </div>
