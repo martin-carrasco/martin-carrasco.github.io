@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.first_name }} {{ site.last_name }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    a { color: inherit; }
+    a:hover { opacity: 0.65; }
+
+    /* ── header ── */
+    .site-header {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    .site-header img {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .site-header h1 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .site-subtitle {
+      color: #555;
+      font-size: 0.93rem;
+      margin-bottom: 10px;
+    }
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 0;
+    }
+    .site-links a {
+      color: #444;
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-right: 14px;
+    }
+    .site-links a:hover { text-decoration: underline; opacity: 1; }
+
+    /* ── bio ── */
+    .bio p { margin-bottom: 0.75rem; }
+    .bio a { text-decoration: underline; }
+    .bio a:hover { opacity: 0.65; }
+
+    /* ── sections ── */
+    section { margin-top: 2.2rem; }
+    section h2 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #aaa;
+      border-bottom: 1px solid #ebebeb;
+      padding-bottom: 5px;
+      margin-bottom: 1rem;
+    }
+
+    /* ── news ── */
+    .news-list { list-style: none; }
+    .news-list li {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+    .news-date {
+      color: #aaa;
+      white-space: nowrap;
+      min-width: 72px;
+      font-size: 0.85rem;
+      padding-top: 1px;
+    }
+    .news-text { font-size: 0.9rem; }
+    .news-text a { text-decoration: underline; }
+
+    /* ── publications ── */
+    .pub { margin-bottom: 1.25rem; }
+    .pub-has-thumb { display: flex; gap: 14px; align-items: flex-start; }
+    .pub-thumb { flex-shrink: 0; }
+    .pub-thumb img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 5px;
+      display: block;
+    }
+    .pub-body { flex: 1; min-width: 0; }
+    .pub-title { font-weight: 600; line-height: 1.4; }
+    .pub-title a { text-decoration: none; }
+    .pub-title a:hover { text-decoration: underline; }
+    .pub-authors {
+      font-size: 0.86rem;
+      color: #555;
+      margin-top: 2px;
+    }
+    .pub-authors strong { color: #1a1a1a; font-weight: 600; }
+    .pub-venue {
+      font-size: 0.84rem;
+      color: #777;
+      font-style: italic;
+      margin-top: 1px;
+    }
+    .pub-links { margin-top: 5px; display: flex; flex-wrap: wrap; gap: 4px; }
+    .pub-links a {
+      font-size: 0.76rem;
+      color: #444;
+      text-decoration: none;
+      background: #f3f3f3;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .pub-links a:hover { background: #e6e6e6; opacity: 1; }
+    .pub-tldr {
+      font-size: 0.82rem;
+      color: #666;
+      margin-top: 3px;
+      line-height: 1.45;
+    }
+    .pub-tldr::before { content: "TL;DR — "; font-weight: 600; color: #999; }
+
+    /* ── talks ── */
+    .talk { display: flex; gap: 1.1rem; margin-bottom: 0.7rem; align-items: baseline; }
+    .talk-date { color: #aaa; white-space: nowrap; min-width: 72px; font-size: 0.85rem; }
+    .talk-body { font-size: 0.9rem; }
+    .talk-title { font-weight: 500; }
+    .talk-title a { text-decoration: none; }
+    .talk-title a:hover { text-decoration: underline; }
+    .talk-event { color: #666; font-size: 0.84rem; }
+    .talk-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: #888;
+      background: #f3f3f3;
+      border-radius: 3px;
+      padding: 0px 5px;
+      margin-left: 5px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── software ── */
+    .software { margin-bottom: 1rem; }
+    .software-name { font-weight: 600; }
+    .software-name a { text-decoration: none; }
+    .software-name a:hover { text-decoration: underline; }
+    .software-lang {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: #777;
+      background: #f3f3f3;
+      border-radius: 3px;
+      padding: 0px 5px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .software-desc { font-size: 0.88rem; color: #555; margin-top: 2px; }
+    .software-links { margin-top: 4px; display: flex; gap: 4px; flex-wrap: wrap; }
+    .software-links a {
+      font-size: 0.76rem;
+      color: #444;
+      text-decoration: none;
+      background: #f3f3f3;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .software-links a:hover { background: #e6e6e6; opacity: 1; }
+
+    @media (max-width: 480px) {
+      .site-header { flex-direction: column; }
+      .site-header img { width: 88px; height: 88px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <img src="{{ '/assets/img/prof_pic.jpeg' | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }}">
+  <div>
+    <h1>{{ site.first_name }} {{ site.last_name }}</h1>
+    <p class="site-subtitle">{{ page.subtitle }}</p>
+    <div class="site-links">
+      <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}">CV</a>
+      {% if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
+      {% if site.scholar_userid %}<a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+      {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      {% if site.bluesky_url %}<a href="https://bsky.app/profile/{{ site.bluesky_url }}" target="_blank" rel="noopener">Bluesky</a>{% endif %}
+      {% if site.linkedin_username %}<a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    </div>
+  </div>
+</header>
+
+<div class="bio">{{ content }}</div>
+
+<section>
+  <h2>News</h2>
+  <ul class="news-list">
+    {% assign sorted_news = site.data.news | sort: "date" | reverse %}
+    {% for item in sorted_news %}
+    <li>
+      <span class="news-date">{{ item.date | date: '%b %Y' }}</span>
+      <span class="news-text">{{ item.content | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+  {% for year_group in pubs_by_year %}
+    {% assign year_pubs = year_group.items | sort: "order" %}
+    {% for pub in year_pubs %}
+    <div class="pub{% if pub.preview %} pub-has-thumb{% endif %}">
+      {% if pub.preview %}
+      <div class="pub-thumb">
+        <img src="{{ '/assets/img/publication_preview/' | append: pub.preview | relative_url }}" alt="{{ pub.title }}">
+      </div>
+      {% endif %}
+      <div class="pub-body">
+        <div class="pub-title">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </div>
+        <div class="pub-authors">{{ pub.authors_display }}</div>
+        <div class="pub-venue">{{ pub.venue }}{% if pub.venue != "" and pub.year != "" %}, {% endif %}{{ pub.year }}</div>
+        {% if pub.tldr %}<div class="pub-tldr">{{ pub.tldr }}</div>{% endif %}
+        {% if pub.url or pub.code or pub.poster %}
+        <div class="pub-links">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">📄 paper</a>{% endif %}
+          {% if pub.poster %}<a href="{{ pub.poster }}" target="_blank" rel="noopener">🪧 poster</a>{% endif %}
+          {% if pub.code %}<a href="{{ pub.code }}" target="_blank" rel="noopener">💻 code</a>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  {% endfor %}
+</section>
+
+<section>
+  <h2>Talks &amp; Presentations</h2>
+  {% assign sorted_talks = site.data.talks | sort: "date" | reverse %}
+  {% for talk in sorted_talks %}
+  <div class="talk">
+    <span class="talk-date">{{ talk.date | date: '%b %Y' }}</span>
+    <div class="talk-body">
+      <div class="talk-title">
+        {% if talk.url %}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}
+        {% if talk.type %}<span class="talk-tag">{{ talk.type }}</span>{% endif %}
+      </div>
+      <div class="talk-event">
+        {{ talk.event }}{% if talk.location %} · {{ talk.location }}{% endif %}
+      </div>
+      {% if talk.slides or talk.video %}
+      <div class="pub-links" style="margin-top:3px">
+        {% if talk.slides %}<a href="{{ '/assets/pdf/' | append: talk.slides | relative_url }}" target="_blank" rel="noopener">📊 slides</a>{% endif %}
+        {% if talk.video %}<a href="{{ talk.video }}" target="_blank" rel="noopener">🎥 video</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section>
+  <h2>Software</h2>
+  {% for sw in site.data.software %}
+  <div class="software">
+    <div class="software-name">
+      <a href="{{ sw.url }}" target="_blank" rel="noopener">{{ sw.name }}</a>
+      {% if sw.language %}<span class="software-lang">{{ sw.language }}</span>{% endif %}
+    </div>
+    <div class="software-desc">{{ sw.description }}</div>
+    <div class="software-links">
+      <a href="{{ sw.url }}" target="_blank" rel="noopener">💻 repo</a>
+      {% if sw.paper %}<a href="{{ sw.paper }}" target="_blank" rel="noopener">📄 paper</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+</body>
+</html>

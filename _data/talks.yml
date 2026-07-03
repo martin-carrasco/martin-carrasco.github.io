@@ -1,0 +1,57 @@
+# Talks and presentations. Add new entries at the top (reverse chronological).
+# Fields:
+#   title    (required) talk or poster title
+#   event    (required) conference / workshop / seminar name
+#   date     (required) YYYY-MM-DD
+#   location (optional) City, Country
+#   type     (optional) talk | poster | invited  — shown as a small tag
+#   url      (optional) link to abstract, proceedings, or event page
+#   slides   (optional) filename in /assets/pdf/ — e.g. my_slides.pdf
+#   video    (optional) URL to recording
+
+- title: "Topology and Combinatorics: Generalization in Deep Learning"
+  event: "Symposium on Geometry Processing"
+  date: "2026-07-02"
+  location: "Bern, Switzerland"
+  type: poster
+  url: "phttps://diglib.eg.org/items/892bb62d-8414-431c-b2e4-c002cb0b69d1"
+
+- title: "Graph Homomorphism Distortion: A Metric to Distinguish Them All and in the Latent Space Bind Them"
+  event: "Jornada de TDA"
+  date: "2026-02-02"
+  location: "Seville, Spain"
+  type: poster
+
+- title: "Higher-Order Positional and Structural Encoder for Combinatorial Representations"
+  event: "ELLIS Doctoral Symposium"
+  location: "Warsaw, Poland"
+  date: "2025-08-27"
+  type: poster
+
+- title: "Higher-Order Positional and Structural Encoder for Combinatorial Representations"
+  event: "Easter European Machine Learning Summer School"
+  location: "Sarajevo, Bosnia and Herzegovina"
+  date: "2025-07-27"
+  type: poster
+
+- title: "Rademacher Complexity Bounds for GNNs"
+  event: "London Geometry and Machine Learning (LOGML)"
+  location: "London, UK"
+  date: "2025-07-04"
+  type: poster
+  url: "https://www.logml.ai/projects/Caterina-Graziani.html"
+
+- title: "Applications of TopoX to Equivariant Topological Networks"
+  event: "Learning on Graphs (LoG)"
+  location: "Amsterdam, Netherlands"
+  date: "2024-08-27"
+  type: poster
+  url: "https://gram-blogposts.github.io/blog/2024/smpn/"
+
+- title: "Applications of TopoX to Equivariant Topological Networks"
+  event: "GRaM Workshop @ ICML 2024"
+  location: "Vienna, Austria"
+  date: "2024-07-27"
+  type: poster
+  url: "https://gram-blogposts.github.io/blog/2024/smpn/"
+

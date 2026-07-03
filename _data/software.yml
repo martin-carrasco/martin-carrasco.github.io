@@ -1,0 +1,25 @@
+# Software and tools. Add new entries at the top (most notable first).
+# Fields:
+#   name        (required) package / tool name
+#   description (required) one-sentence description
+#   url         (required) GitHub or project homepage
+#   paper       (optional) link to associated paper
+#   language    (optional) primary programming language — shown as a tag
+
+- name: "MANTRA"
+  description: "A benchmark dataset of triangulated manifolds for evaluating topological generalization in deep learning."
+  url: "https://github.com/aidos-lab/mantra"
+  paper: "https://arxiv.org/abs/2605.06467"
+  language: "Python"
+
+- name: "TopoBench"
+  description: "TopoBench is a Python library designed to standardize benchmarking and accelerate research in Topological Deep Learning"
+  url: "https://github.com/geometric-intelligence/topobench"
+  paper: "https://arxiv.org/abs/2406.06642"
+  language: "Python"
+
+- name: "challenge-icml-2024"
+  description: "Code for our ICML 2024 Topological Deep Learning Challenge entry using TopoX and equivariant message passing on simplicial complexes."
+  url: "https://github.com/DL2-UvA/challenge-icml-2024"
+  paper: "https://gram-blogposts.github.io/blog/2024/smpn/"
+  language: "Python"

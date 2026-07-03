@@ -1,0 +1,126 @@
+[
+  {
+    "id": "carrasco2026rademacher",
+    "title": "On the Rademacher Complexity of GNNs: Unifying Expressivity and Geometry",
+    "authors_display": "<strong>M.&nbsp;Carrasco</strong><sup>✱</sup>, V. A.&nbsp;Martirosyan<sup>✱</sup>, A.&nbsp;Mehrab<sup>✱</sup>, C.&nbsp;Netto<sup>✱</sup>, E.&nbsp;Okoyomon<sup>✱</sup>, and C.&nbsp;Graziani",
+    "venue": "Preprint",
+    "year": "2026",
+    "order": 0,
+    "keywords": [
+      "submitted"
+    ]
+  },
+  {
+    "id": "carrasco2025rademacher",
+    "title": "Rademacher Meets Colors: More Expressivity, but at What Cost?",
+    "authors_display": "<strong>M.&nbsp;Carrasco</strong><sup>✱</sup>, V. A.&nbsp;Martirosyan<sup>✱</sup>, A.&nbsp;Mehrab<sup>✱</sup>, C.&nbsp;Netto<sup>✱</sup>, E.&nbsp;Okoyomon<sup>✱</sup>, and C.&nbsp;Graziani",
+    "venue": "New Perspectives in Graph Machine Learning",
+    "year": "2025",
+    "order": 1,
+    "keywords": [
+      "article"
+    ],
+    "url": "https://openreview.net/forum?id=r7FHKqTsFG"
+  },
+  {
+    "id": "carrasco2025hopsescalablehigherorderpositional",
+    "title": "HOPSE: Scalable Higher-Order Positional and Structural Encoder for Combinatorial Representations",
+    "authors_display": "G.&nbsp;Bernardez, M.&nbsp;Montagna, L.&nbsp;Van Langendonck, <strong>M.&nbsp;Carrasco</strong>, A.&nbsp;Akbari, L.&nbsp;Cornelis, M.&nbsp;Papillon, P.&nbsp;Barlet-Ros, N.&nbsp;Miolane, and L.&nbsp;Telyatnikov",
+    "venue": "Preprint",
+    "year": "2025",
+    "order": 2,
+    "keywords": [
+      "submitted"
+    ],
+    "url": "https://arxiv.org/abs/2505.15405"
+  },
+  {
+    "id": "carrasco2026graph",
+    "title": "Graph Homomorphism Distortion: A Metric to Distinguish Them All and in the Latent Space Bind Them",
+    "authors_display": "<strong>M.&nbsp;Carrasco</strong><sup>✱</sup>, O.&nbsp;Zaghen<sup>✱</sup>, K.&nbsp;Sumaraj, E.&nbsp;Bekkers, and B.&nbsp;Rieck",
+    "venue": "Preprint",
+    "year": "2026",
+    "order": 3,
+    "keywords": [
+      "submitted"
+    ],
+    "url": "https://arxiv.org/abs/2511.03068",
+    "tldr": "We propose a metric that captures both features and struture in attributed graphs."
+  },
+  {
+    "id": "limbeck2026diversity",
+    "title": "Diversity Curves for Graph Representation Learning",
+    "authors_display": "K.&nbsp;Limbeck, N.&nbsp;Häusermann, <strong>M.&nbsp;Carrasco</strong>, G.&nbsp;Wolf<sup>†</sup>, and B.&nbsp;Rieck<sup>†</sup>",
+    "venue": "Preprint",
+    "year": "2026",
+    "order": 4,
+    "keywords": [
+      "submitted"
+    ],
+    "url": "https://arxiv.org/abs/2605.06466",
+    "tldr": "We propose diversity curves, novel graph-level representations for unsupervised tasks that track the structural diversity, namely the metric space spread, of graphs across coarsening levels obtained through edge contractions."
+  },
+  {
+    "id": "schmidt2026no",
+    "title": "No Triangulation Without Representation: Generalization in Topological Deep Learning",
+    "authors_display": "J. S.&nbsp;Schmidt<sup>✱</sup>, <strong>M.&nbsp;Carrasco</strong><sup>✱</sup>, E.&nbsp;Röell, G.&nbsp;Wolf, N.&nbsp;Blaser<sup>†</sup>, and B.&nbsp;Rieck<sup>†</sup>",
+    "venue": "Preprint",
+    "year": "2026",
+    "order": 5,
+    "keywords": [
+      "submitted"
+    ],
+    "url": "https://arxiv.org/abs/2605.06467",
+    "tldr": "We find topological generalization is lacking in deep learning and present an evaluation framework to test for it."
+  },
+  {
+    "id": "pmlr-v251-bernardez24a",
+    "title": "ICML Topological Deep Learning Challenge 2024: Beyond the Graph Domain",
+    "authors_display": "G.&nbsp;Bernárdez, L.&nbsp;Telyatnikov, M.&nbsp;Montagna, F.&nbsp;Baccini, M.&nbsp;Papillon, M.&nbsp;Ferriol-Galm\\ś, M.&nbsp;Hajij, T.&nbsp;Papamarkou, M. S.&nbsp;Bucarelli, O.&nbsp;Zaghen, J.&nbsp;Mathe, A.&nbsp;Myers, S.&nbsp;Mahan, H.&nbsp;Lillemark, S.&nbsp;Vadgama, E.&nbsp;Bekkers, T.&nbsp;Doster, T.&nbsp;Emerson, H.&nbsp;Kvinge, K.&nbsp;Agate, N. K.&nbsp;Ahmed, P.&nbsp;Bai, M.&nbsp;Banf, C.&nbsp;Battiloro, M.&nbsp;Beketov, P.&nbsp;Bogdan, <strong>M.&nbsp;Carrasco</strong>, A.&nbsp;Cavallo, Y. Y.&nbsp;Choi, G.&nbsp;Dasoulas, M.&nbsp;Elphick, G.&nbsp;Escalona, D.&nbsp;Filipiak, H.&nbsp;Fritze, T.&nbsp;Gebhart, M.&nbsp;Gil-Sorribes, S.&nbsp;Goomanee, V.&nbsp;Guallar, L.&nbsp;Imasheva, A.&nbsp;Irimia, H.&nbsp;Jin, G.&nbsp;Johnson, N.&nbsp;Kanakaris, B.&nbsp;Koloski, V.&nbsp;Kovac, M.&nbsp;Lecha, M.&nbsp;Lee, P.&nbsp;Leroy, T.&nbsp;Long, G.&nbsp;Magai, A.&nbsp;Martinez, M.&nbsp;Masden, S.&nbsp;Meznar, B.&nbsp;Miquel-Oliver, A.&nbsp;Molina, A.&nbsp;Nikitin, M.&nbsp;Nurisso, M.&nbsp;Piekenbrock, Y.&nbsp;Qin, P.&nbsp;Rygiel, A.&nbsp;Salatiello, M.&nbsp;Schattauer, P.&nbsp;Snopov, J.&nbsp;Suk, V.&nbsp;S\\'ćhez, M.&nbsp;Tec, F.&nbsp;Vaccarino, J.&nbsp;Verhellen, F.&nbsp;Wantiez, A.&nbsp;Weers, P.&nbsp;Zajec, B.&nbsp;Skrlj, and N.&nbsp;Miolane",
+    "venue": "Proceedings of Machine Learning Research",
+    "year": "2024",
+    "order": 6,
+    "keywords": [
+      "article"
+    ],
+    "url": "https://proceedings.mlr.press/v251/bernardez24a.html"
+  },
+  {
+    "id": "Carrasco_Berentzen_Garcia_2024",
+    "title": "Applications of TopoX to Equivariant Topological Networks",
+    "authors_display": "<strong>M.&nbsp;Carrasco</strong>, A.&nbsp;Berentzen, and A.&nbsp;Garcia",
+    "venue": "Geometry-grounded Representation Learning and Generative Modeling Workshop (GRaM) @ ICML",
+    "year": "2024",
+    "order": 7,
+    "keywords": [
+      "conference",
+      "peer"
+    ],
+    "url": "https://gram-blogposts.github.io/blog/2024/smpn/",
+    "code": "https://github.com/DL2-UvA/challenge-icml-2024"
+  },
+  {
+    "id": "telyatnikov2025topobench",
+    "title": "TopoBench: A Framework for Benchmarking Topological Deep Learning",
+    "authors_display": "L.&nbsp;Telyatnikov, G.&nbsp;Bernardez, M.&nbsp;Montagna, M.&nbsp;Hajij, <strong>M.&nbsp;Carrasco</strong>, P.&nbsp;Vasylenko, M.&nbsp;Papillon, G.&nbsp;Zamzmi, M. T.&nbsp;Schaub, J.&nbsp;Verhellen, P.&nbsp;Snopov, B.&nbsp;Miquel-Oliver, M.&nbsp;Gil-Sorribes, A.&nbsp;Molina, V.&nbsp;Guallar, T.&nbsp;Long, J.&nbsp;Suk, P.&nbsp;Rygiel, A. V.&nbsp;Nikitin, G.&nbsp;Escalona, M.&nbsp;Banf, D.&nbsp;Filipiak, L.&nbsp;Imasheva, M.&nbsp;Schattauer, A. L.&nbsp;Martinez, H.&nbsp;Fritze, M.&nbsp;Masden, V.&nbsp;Sanchez, M.&nbsp;Lecha, A.&nbsp;Cavallo, C.&nbsp;Battiloro, M.&nbsp;Piekenbrock, M.&nbsp;Tec, G.&nbsp;Dasoulas, N.&nbsp;Miolane, S.&nbsp;Scardapane, and T.&nbsp;Papamarkou",
+    "venue": "Journal of Data-centric Machine Learning Research",
+    "year": "2025",
+    "order": 8,
+    "keywords": [
+      "article"
+    ],
+    "url": "https://openreview.net/forum?id=07sTzyEVtY"
+  },
+  {
+    "id": "10552853",
+    "title": "Inter-node Message Passing through Optical Reconfigurable Memory Channel",
+    "authors_display": "M. G.&nbsp;Palma, J.&nbsp;Gonzalez, <strong>M.&nbsp;Carrasco</strong>, R.&nbsp;Rubio-Noriega, K.&nbsp;Bergman, and R.&nbsp;Azevedo",
+    "venue": "IEEE Access",
+    "year": "2024",
+    "order": 9,
+    "keywords": [
+      "article"
+    ],
+    "url": "https://ieeexplore.ieee.org/document/10552853/"
+  }
+]

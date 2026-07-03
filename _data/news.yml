@@ -1,0 +1,49 @@
+# News items displayed on the homepage. Add entries in reverse chronological order.
+# Each item needs `date` (YYYY-MM-DD) and `content` (Markdown supported).
+
+- date: "2026-07-02"
+  content: >
+    Presented [*No Triangulation Without Representation: Generalization in Topological Deep Learning*](https://diglib.eg.org/items/892bb62d-8414-431c-b2e4-c002cb0b69d1) at the [Symposium on Geometry Processing](https://sgp26.org/) check-out the poster [here](https://diglib.eg.org/server/api/core/bitstreams/066f3f6e-36fb-4037-9147-c2c05fcdd418/content)
+
+- date: "2026-06-23"
+  content: >
+    Attended the (first ?) [**Workshop On Topological Deep Learning**](https://workshop.topology.rocks/) organized by the wonderful [Ines](https://ines.topology.rocks/) and [Elena](https://elenaxwang.com/), thank you for all the effort !
+- date: "2026-05-08"
+  content: >
+    Preprint out: [*Diversity Curves for Graph Representation Learning*](https://arxiv.org/abs/2605.06466)
+    with [Katharina](https://limbeckkat.github.io/), [Nadja](https://nadja.topology.rocks/), [Guy](https://guywolf.org/), and Bastian.
+
+- date: "2026-05-07"
+  content: >
+    Preprint out: [*No Triangulation Without Representation: Generalization in Topological Deep Learning*](https://arxiv.org/abs/2605.06467)
+    with Johannes, Ernst, Guy, Nello, and Bastian.
+
+- date: "2025-10-01"
+  content: >
+    Started my Ph.D. at [AIDOS](https://aidos.group), University of Fribourg!
+
+- date: "2025-09-22"
+  content: >
+    [*Rademacher Meets Colors: More Expressivity, but at What Cost?*](https://openreview.net/forum?id=r7FHKqTsFG)
+    accepted at [NeurIPS 2025 — New Perspectives in Graph Machine Learning](https://newgraphperspectives.com/).
+
+- date: "2025-08-31"
+  content: >
+    Graduated from the M.Sc. in Artificial Intelligence at VU Amsterdam with a thesis grade of 9.5/10.
+
+- date: "2025-08-30"
+  content: >
+    Attended the [ELLIS Doctoral Symposium 2025](https://eds2025.pl) in Warsaw.
+
+- date: "2025-07-24"
+  content: >
+    Attended the [Eastern European Machine Learning Summer School 2025](https://eeml.eu) in Košice.
+
+- date: "2025-07-16"
+  content: >
+    Attended the [ELLIS Probabilistic ML Summer School 2025](https://www.ellis.eng.cam.ac.uk/summer-school/) in Cambridge.
+
+- date: "2025-07-04"
+  content: >
+    Attended [LOGML 2025](https://www.logml.ai) in London and worked on
+    [Rademacher complexity bounds for GNNs](https://www.logml.ai/projects/Caterina-Graziani.html).
