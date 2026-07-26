@@ -1,6 +1,12 @@
 # News items displayed on the homepage. Add entries in reverse chronological order.
 # Each item needs `date` (YYYY-MM-DD) and `content` (Markdown supported).
 
+- date: "2026-07-15"
+  content: >
+    Visited [Anthea's](https://sites.google.com/view/antheamonod/home) lab to spread the gospel of [rigorous benchmarking](https://arxiv.org/pdf/2605.06467), thanks for having me :) !
+- date: "2026-07-13"
+  content: >
+    Came back to [LOGML](logml.ai) but this year as an organizer. Still be best summer school out there! I'm looking forward to LOMGL 2027!
 - date: "2026-07-02"
   content: >
     Presented [*No Triangulation Without Representation: Generalization in Topological Deep Learning*](https://diglib.eg.org/items/892bb62d-8414-431c-b2e4-c002cb0b69d1) at the [Symposium on Geometry Processing](https://sgp26.org/) check-out the poster [here](https://diglib.eg.org/server/api/core/bitstreams/066f3f6e-36fb-4037-9147-c2c05fcdd418/content)
