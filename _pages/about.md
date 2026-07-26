@@ -13,3 +13,8 @@ I am an [ELLIS](https://ellis.eu/phd-postdoc) Doctoral Student at [AIDOS](https:
 + Algorithmics and complexity
 
 
+## Random principles that guide my scientific reasearch
++ "Que otros se enorgullezcan de las páginas que han escrito; yo me enorgullezco de las que he leído" -> J.L Borges
++ "To be rooted is perhaps the most important and least recognized need of the human soul. It is one of the hardest to define. A human being has roots by virtue of his real, active, and natural participation in the life of a community which preserves in living shape certain particular treasures of the past and certain particular expectations for the future" -> Simon Weil
++ "Incluso la persona más entrenada y atenta introduce fallos [...] De hecho, la personalidad del copista se retrata en las faltas que comete..." -> Irene Vallejo
++ "The only principle that does not inhibit progress is: anything goes" -> Paul Feyerabend
