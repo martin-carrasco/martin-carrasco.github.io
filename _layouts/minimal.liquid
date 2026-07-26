@@ -85,6 +85,52 @@
     .bio a { text-decoration: underline; }
     .bio a:hover { opacity: 0.65; }
 
+    .bio ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+      padding-left: 0;
+    }
+    .bio ul li {
+      position: relative;
+      padding-left: 1.15rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .bio ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #bbb;
+    }
+
+    /* ── bio: quote list ── */
+    .bio ul.quote-list li {
+      padding: 0.1rem 0 0.1rem 1.7rem;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+      color: #333;
+      line-height: 1.6;
+    }
+    .bio ul.quote-list li:last-child { margin-bottom: 0; }
+    .bio ul.quote-list li::before {
+      content: "\201C";
+      top: -0.2rem;
+      font-size: 1.9rem;
+      font-style: normal;
+      font-family: Georgia, serif;
+      color: #ddd;
+      line-height: 1;
+    }
+    .quote-author {
+      display: block;
+      margin-top: 0.35rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: #999;
+    }
+    .quote-author::before { content: "— "; }
+
     /* ── sections ── */
     section { margin-top: 2.2rem; }
     section h2 {
