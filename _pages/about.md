@@ -9,13 +9,13 @@ I am an [ELLIS](https://ellis.eu/phd-postdoc) Doctoral Student at [AIDOS](https:
 
 ## Research Interests
 + Representation learning of geometric and topological spaces
-+ Metric geometry and and generalized metric spaces
++ Metric geometry and generalized metric spaces
 + Algorithmics and complexity
 
 
 ## Random principles that guide my scientific reasearch
-+ Que otros se enorgullezcan de las páginas que han escrito; yo me enorgullezco de las que he leído <span class="quote-author">J.L. Borges</span>
-+ To be rooted is perhaps the most important and least recognized need of the human soul. It is one of the hardest to define. A human being has roots by virtue of his real, active, and natural participation in the life of a community which preserves in living shape certain particular treasures of the past and certain particular expectations for the future <span class="quote-author">Simone Weil</span>
-+ Incluso la persona más entrenada y atenta introduce fallos [...] De hecho, la personalidad del copista se retrata en las faltas que comete... <span class="quote-author">Irene Vallejo</span>
-+ The only principle that does not inhibit progress is: anything goes <span class="quote-author">Paul Feyerabend</span>
++ Que otros se enorgullezcan de las páginas que han escrito; yo me enorgullezco de las que he leído. <span class="quote-author">J.L. Borges</span>
++ To be rooted is perhaps the most important and least recognized need of the human soul. It is one of the hardest to define. A human being has roots by virtue of his real, active, and natural participation in the life of a community which preserves in living shape certain particular treasures of the past and certain particular expectations for the future. <span class="quote-author">Simone Weil</span>
++ Incluso la persona más entrenada y atenta introduce fallos [...] De hecho, la personalidad del copista se retrata en las faltas que comete. <span class="quote-author">Irene Vallejo</span>
++ The only principle that does not inhibit progress is: anything goes. <span class="quote-author">Paul Feyerabend</span>
 {: .quote-list}
